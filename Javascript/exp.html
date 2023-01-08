@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exp</title>
+    <script>
+        
+        // var name=prompt("Enter Your name : ")
+        var namept=/^[a-zA-Z ]+$/
+        var nmpt=name.match(namept)
+        var new_str=String(name.match(namept))
+        
+
+
+        // if (name.match(namept)){
+        //     document.write(name.match(namept))
+        //     document.write(` ${typeof(name.match(namept))} `)
+        //     name=Object
+        //     document.write(typeof(name))
+
+        // }
+        // else{
+        //     document.write(`${name} does not match the pattern.`)
+        // }
+
+        // if (name){
+        //     // document.write(` Congrats The Pattern matched `) 
+        //     document.write(name==namept)
+        //     document.write(typeof(new_str))
+        // }
+
+        function check(){
+            
+            var v1=document.getElementsByName("gender");
+
+            // document.write(v1)
+            if (v1[0].checked){
+                document.getElementById("spn").innerHTML=v1[0].value
+            }
+            else if (v1[1].checked){
+                document.getElementById("spn").innerHTML=v1[1].value
+            }
+            else if (v1[2].checked){
+                document.getElementById("spn").innerHTML=v1[2].value
+            }
+            else{
+                document.getElementById("spn").innerHTML="No Button Selected."
+            }
+            // for (var i=0;i<v1.length;i++){
+            //     if (v1[i].checked){
+            //         document.getElementById("spn").innerHTML=`${v1[i].value}`
+            //     }
+            // }
+
+            // document.getElementById("spn").innerHTML=`The value passed at backend is : ${v1}`
+            return false
+        }
+    </script>
+</head>
+<body>
+    <form action="#" onsubmit="return check()">
+    <label for="gender">Gender</label><br>
+
+    <input type="radio" name = "gender" id="gen" value="male"> Male <br>
+    <input type="radio" name = "gender" id="gen" value="female"> Female <br>
+    <input type="radio" name = "gender" id="gen" value="other"> Other <br><br>
+    <input type="submit"  ><br><br>
+    <span id="spn">...</span>
+    </form>
+</body>
+</html>

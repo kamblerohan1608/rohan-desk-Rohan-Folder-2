@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documnet object model</title>
+    <script>
+        // 1 - getElementbyid
+        // 2 - getElementbyClassname
+
+        function para(){
+            document.getElementById("para").innerHTML='You Clicked On Button '
+        }
+
+        function drop(){
+            // document.write("Rohan")
+            var x=document.getElementById("select").value
+            // document.write(x)
+            document.getElementById("para1").innerHTML=`You Clicked On Button \n the value passed at backend for p element is ${x}`
+        }
+
+    </script>
+</head>
+<body>
+    <h1>hello</h1>
+    <button onclick="para()">click here for getElementById </button>
+    <br><br>
+    <button >click here for getElementsByClassName</button>
+    <br><br>
+    <p class = "paragraph" id="para" >abc</p><br>
+    
+    <form action="">
+        <select id = "select" onchange="drop()">
+            <option value="python">Python</option>
+            <option value="java">java</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select><br><br>
+        <input type="submit" id=""submit value="submit">
+    </form>
+    <p id="para1">abc</p>
+</body>
+</html>

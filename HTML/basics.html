@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <title>Dcoument</title>
+</head>
+
+<body style="background-color:darkgray">
+
+    <h3>HTML FORM</h3>
+
+    <form action="https://www.youtube.com/">
+
+        <label for="fname">First Name : </label>
+        <input type="text" name="fname" id="fname" placeholder="Enter First Name" size="50"><br><br>
+
+        <label for="lname">Last Name : </label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name" size="50"><br><br>
+
+        <label for="gender">Gender</label><br>
+
+        <input type="radio" name = "gender" value="male"> Male <br>
+        <input type="radio" name = "gender" value="female"> Female <br>
+        <input type="radio" name = "gender" value="other"> Other <br><br>
+
+
+        <label> Course : </label>
+        <select>
+            <option value="Select Course">Select Course</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="HTML">HTML</option>
+            <option value="C++">C++</option>
+            <option value="Css">Css</option>
+        </select><br><br>
+
+        <label>Contact Number : </label><br>
+        <input type="text" name="country_code" value="+91" size="2">
+        <input type="text" name="number" ><br><br>
+
+        <label for="date">Date : </label>
+        <input type="date" name = "date" id="date"><br><br>
+
+        <label>Address : </label> <br>
+        <textarea name="address" id="Address" cols="80" rows="5" ></textarea> <br><br>
+
+        <label for="email">Email : </label>
+        <input type="email" name = "email" id ="email" size = "40" required placeholder="Enter Email" required><br><br>
+
+        <label for="pass">Password : </label>
+        <input type="Password" name = "pass" id ="pass" size = "40" required placeholder="Enter Password" required><br><br>
+
+        <label for="pass1">Confirm Password : </label>
+        <input type="Password" name = "pass1" id ="pass1" size = "40" required placeholder="Confirm Password" ><br><br>
+
+        <input type="submit" value="Submit" style="color:darkgreen;">
+
+        <input type="reset" value="Reset" style="color:red;"><br><br>
+
+        
+
+    </form>
+
+</body>
+
+</html>

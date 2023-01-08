@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>browser object model </title>
+    <!-- windows object -->
+    
+    <!-- 1 - alert
+    2 - confirm
+    3 - prompt
+    4 - open
+    5 - set time out -->
+    
+    <script>
+
+        function alertbtn(){
+            alert("This is creatrd alert box")
+        }
+
+        function confirmbtn(){
+            var x=confirm("This is cerated confirm box.")
+            if (x==true){
+                document.write("You clicked on confirm")
+            }
+            else{
+                document.write("You clicked on cancel")
+            }
+        }
+
+        function promptbtn(){
+            var y=prompt("This is created prompt object \n Enter Your name : ")
+            document.write(`Good Morning ${y}`)
+        }
+
+        function openbtn(){
+            open("https://www.google.com")  
+        }
+
+        function setTimeoutbtn(){
+            setTimeout(function(){open("https://www.google.com")},2000)
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="alertbtn()">Click here this is example of windows alert object</button>
+    <br><br>
+    <button onclick="confirmbtn()">Click here this is example of windows confirm object</button>
+    <br><br>
+    <button onclick="promptbtn()">Click here this is example of windows prompt object</button>
+    <br><br>
+    <button onclick="openbtn()">Click here this is example of windows open object</button>
+    <br><br>
+    <button onclick="setTimeoutbtn()">Click here this is example of windows setTimeout object</button>
+    <br><br>
+</body>
+</html>

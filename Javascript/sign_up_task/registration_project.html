@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp 3</title>
+    <link rel="stylesheet" href="log_in.css">
+    <script src="form_validations.js">
+    </script>
+</head>
+
+<body>
+    <h1>WELCOME TO THE APPLICATION</h1>
+    <div class="div1">
+        <h3 id="log_in_head">SIGN UP PORTAL</h3>
+
+        <form action="#" name="registrationform" onsubmit="return validations(document.getElementById('email'),document.getElementById('pass'))">
+
+            <label for="fname">First Name : </label>
+            <input type="text" name="fname" id="fname" placeholder="Enter First Name" size="50">
+            <span name="fnamemsg" id="fnamemsg"></span>
+            <br><br>
+    
+    
+            <label for="lname">Last Name : </label>
+            <input type="text" name="lname" id="lname" placeholder="Enter Last Name" size="50">
+            <span name="lnamemsg" id="lnamemsg"></span>
+            <br><br>
+    
+            <label for="gender">Gender : </label><span id="gen"></span><br>
+    
+            <input type="radio" name = "gender" value="male"> Male <br>
+            <input type="radio" name = "gender" value="female"> Female <br>
+            <input type="radio" name = "gender" value="other"> Other <br><br>
+    
+            <label>Contact Number : </label><span id="c_no"></span><br>
+            <input type="text" name="country_code" value="+91" size="2">
+            <input type="text" name="number" id="number"><br><br>
+    
+    
+            <label for="email">Email : </label>
+            <input type="text" name = "email" id ="email" size = "40"  placeholder="Enter Email" ><span id="user_name"></span><br><br>
+    
+            <label for="pass">Password : </label>
+            <input type="password" name = "pass" id ="pass" size = "40"  placeholder="Enter Password" ><span id="p_word"></span><br><br>
+    
+            <label for="pass1">Confirm Password : </label>
+            <input type="password" name = "pass1" id ="pass1" size = "40"  placeholder="Confirm Password" ><span id="p_word1"></span><br><br>
+    
+            <input type="checkbox" name="show" id="show" onclick="showpass()"><span>Show Password</span><br><br>
+    
+            <input type="submit" value="Submit" style="color:darkgreen;">
+    
+            <input type="reset" value="Reset" style="color:red;"><br><br>
+            </form>
+    </div>
+    <div class="div2">
+        <h3>LOG IN PORTAL</h3>
+        <form action="app.html" onsubmit="return logging_in(document.getElementById('log_email'),document.getElementById('log_pass'))">
+            <label for="log_email" id="e1">Email : </label>
+            <input type="text" name = "log_email" id ="log_email" size = "40"  placeholder="Enter Email" ><br><br>
+    
+            <label for="log_pass">Password : </label>
+            <input type="password" name = "log_pass" id ="log_pass" size = "40"  placeholder="Enter Password" ><br><br>
+    
+
+
+            <input type="submit" name="submit" id="log_in" value="log in">
+
+        </form>
+    </div>
+</body>
+
+</html>

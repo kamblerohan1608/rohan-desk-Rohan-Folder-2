@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var user = []
+        var pass = []
+        function test(x, y) {
+            if (confirm("ALL INFORMATION PROVIDED IS TRUE AND CORRECT...?") == true) {
+                user.push(x.value)
+                pass.push(y.value)
+                console.log(user)
+                console.log(pass)
+                alert("REGISTERED SUCCESFULLY !!!...\nYOU CAN LOG IN NOW !!")
+                document.getElementById("fname").value=""
+                document.getElementById("lname").value=""
+                return false
+            }
+            else {
+                return false
+            }
+        }
+
+
+        function logged_in(a,b){
+
+            console.log(a.value);
+            console.log(b.value);
+            console.log(typeof(a.value));
+            console.log(typeof(b.value));
+            console.log(typeof(user[0]));
+            console.log(typeof(pass[0]));
+            console.log((user.indexOf(a.value) >= 0) && (user.indexOf(a.value)==pass.indexOf(b.value)))
+            console.log(user.indexOf(a.value))
+            console.log(pass.indexOf(b.value))
+
+            return false
+
+
+            // if (((a.value in user) && (b.value in pass)) && ((user.indexOf(a.value))==(pass.indexOf(b.value)))) {
+            //     document.getElementById("result").innerHTML="The user id and password matched."
+            //     return false
+
+            // }
+            // else{
+            //     document.getElementById("result").innerHTML="incorrect id or password"
+            //     return false
+            // }
+        }
+    </script>
+</head>
+
+<body>
+    signup feature <br><br>
+
+    <form action="#">
+        <input type="text" name="" id="fname">
+        <input type="text" name="" id="lname">
+        <button type="submit" onclick="return test(document.getElementById('fname'),document.getElementById('lname'))">click here</button>
+    </form><br><br>
+    log in feature <br><br>
+    <form action="#">
+        <input type="text" name="" id="flog">
+        <input type="text" name="" id="llog">
+        <button type="submit" onclick="logged_in(document.getElementById('flog'),document.getElementById('llog'))">check for log in</button>
+    </form>
+    <span id="result"></span>
+
+
+</body>
+
+</html>
